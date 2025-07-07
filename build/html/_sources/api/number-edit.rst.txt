@@ -1,0 +1,36 @@
+Number Edit Endpoint
+==============
+
++-------------------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                           | Required Values   | HTTP Methods    |
++===============================================================================+===================+=================+
+| https://newtingtingapi.prixa.live/api/v1/phone-number/update/<contact_id>/    | Contact ID        | PATCH           |
++-------------------------------------------------------------------------------+-------------------+-----------------+
+
+Note that the <contact_id> in the URL should be replaced with the ID of the number you want to edit the details of.  The attributes of the number you want to change also needs to be provided.
+
+Sample Input:
+
+.. code-block:: json
+
+    {
+        "number" : 9808684325
+    }
+
+The details after the updating is successfully completed is shown
+
+Sample Output:
+
+.. code-block:: json
+
+    {
+        "id": 52,
+        "number": "9808684325",
+        "status": "not started",
+        "updated_at": "2025-07-07T15:48:59.617239+05:45",
+        "call_duration": "0s",
+        "playback": "",
+        "credit_consumed": 0,
+        "credit_consumed_SMS": 0,
+        "carrier": "Ncell"
+    }

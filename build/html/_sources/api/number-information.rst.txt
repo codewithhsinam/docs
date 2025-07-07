@@ -1,0 +1,22 @@
+Number Information Endpoint
+==============
+
++-------------------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                           | Required Values   | HTTP Methods    |
++===============================================================================+===================+=================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/<contact_id>/attributes/    | Contact ID        | GET             |
++-------------------------------------------------------------------------------+-------------------+-----------------+
+
+Note that the <number_id> in the URL should be replaced with the ID of the number you want to retrieve the information of.
+
+The details of the number will be retrieved with the following details:
+
+Sample output:
+
+.. code-block:: json
+
+    {
+        "age": 22,
+        "name": "राहुल",
+        "salary": "एक लाख "
+    }

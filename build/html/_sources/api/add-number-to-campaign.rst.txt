@@ -1,0 +1,31 @@
+Add Number to a Campaign Endpoint
+==============
+
++-------------------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                           | Required Values   | HTTP Methods    |
++===============================================================================+===================+=================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/<campaign_id>/add-contact/  | Campaign ID       | POST            |
++-------------------------------------------------------------------------------+-------------------+-----------------+
+
+Note that the <campaign_id> in the URL should be replaced with the ID of the campaign you want to add a number to and the number to add should be passed as an integer in the following way:
+
+Sample Input:
+
+.. code-block:: json
+
+    {
+        "number": 9843812344
+    }
+
+Note that if you want to add numerous numbers to a campaign you can send the bulk file of contacts in separate endpoint
+which is:
+
+https://newtingtingapi.prixa.live/api/v1/campaign/create/<campaign_id>/detail/
+
+Sample Input:
+
+.. code-block:: json
+
+    {
+        "bulk_file": "numbers.xlsx"
+    }
