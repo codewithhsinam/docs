@@ -13,3 +13,4 @@ Campaign
     demo-call
     run-campaign
     rerun-campaign
+    download-report
