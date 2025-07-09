@@ -9,6 +9,10 @@ Campaign
     update-campaign
     delete-campaign
     campaign-details
+    contact-list
+    contact-delete
+    contact-information
+    contact-edit
     test-voice
     demo-call
     run-campaign

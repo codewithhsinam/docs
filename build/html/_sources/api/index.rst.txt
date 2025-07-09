@@ -8,4 +8,4 @@ API
    authentication
    phone-numbers
    campaign
-   campaign-action
+   .. campaign-action

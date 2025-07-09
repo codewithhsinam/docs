@@ -1,0 +1,31 @@
+Contact List Endpoint
+==============
+
++----------------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                        | Required Values   | HTTP Methods    |
++============================================================================+===================+=================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/<campaign_id>/contacts/  | Campaign ID       | GET             |
++----------------------------------------------------------------------------+-------------------+-----------------+
+
+Note that the <campaign_id> in the URL should be replaced with the ID of the campaign you want to retrieve the contact of. 
+
+The ID will be used to then delete and edit the contact from the campaign.
+
+Sample Output:
+
+.. code-block:: json
+
+    [
+        {
+            "id": 125,
+            "number": "9841349152"
+        },
+        {
+            "id": 124,
+            "number": "9865993245"
+        },
+        {
+            "id": 123,
+            "number": "9861566372"
+        }
+    ]

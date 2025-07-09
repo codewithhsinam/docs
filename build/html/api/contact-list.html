@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campaign &mdash; TingTing  documentation</title>
+  <title>Contact List Endpoint &mdash; TingTing  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Get Campaign Endpoint" href="get-campaign.html" />
-    <link rel="prev" title="Release Number Endpoint" href="release-number.html" /> 
+    <link rel="next" title="Contact Delete Endpoint" href="contact-delete.html" />
+    <link rel="prev" title="Campaign Details Endpoint" href="campaign-details.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,13 +47,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="authentication.html">Authentication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="phone-numbers.html">Phone Numbers</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Campaign</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="campaign.html">Campaign</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="get-campaign.html">Get Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-campaign.html">Add Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update-campaign.html">Update Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete-campaign.html">Delete Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="campaign-details.html">Campaign Details Endpoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contact-list.html">Contact List Endpoint</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Contact List Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contact-delete.html">Contact Delete Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contact-information.html">Contact Information Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contact-edit.html">Contact Edit Endpoint</a></li>
@@ -82,9 +82,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">API</a></li>
-      <li class="breadcrumb-item active">Campaign</li>
+          <li class="breadcrumb-item"><a href="campaign.html">Campaign</a></li>
+      <li class="breadcrumb-item active">Contact List Endpoint</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/campaign.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/contact-list.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -92,24 +93,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="campaign">
-<h1>Campaign<a class="headerlink" href="#campaign" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="get-campaign.html">Get Campaign Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="add-campaign.html">Add Campaign Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="update-campaign.html">Update Campaign Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="delete-campaign.html">Delete Campaign Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="campaign-details.html">Campaign Details Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact-list.html">Contact List Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact-delete.html">Contact Delete Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact-information.html">Contact Information Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact-edit.html">Contact Edit Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test-voice.html">Test Voice Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo-call.html">Demo Call Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="run-campaign.html">Run Campaign Endpoint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download-report.html">Download Report Endpoint</a></li>
-</ul>
+  <section id="contact-list-endpoint">
+<h1>Contact List Endpoint<a class="headerlink" href="#contact-list-endpoint" title="Link to this heading"></a></h1>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>URL</p></th>
+<th class="head"><p>Required Values</p></th>
+<th class="head"><p>HTTP Methods</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://newtingtingapi.prixa.live/api/v1/campaign">https://newtingtingapi.prixa.live/api/v1/campaign</a>/&lt;campaign_id&gt;/contacts/</p></td>
+<td><p>Campaign ID</p></td>
+<td><p>GET</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that the &lt;campaign_id&gt; in the URL should be replaced with the ID of the campaign you want to retrieve the contact of.</p>
+<p>The ID will be used to then delete and edit the contact from the campaign.</p>
+<p>Sample Output:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9841349152&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9865993245&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9861566372&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
 </div>
 </section>
 
@@ -117,8 +134,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="release-number.html" class="btn btn-neutral float-left" title="Release Number Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get-campaign.html" class="btn btn-neutral float-right" title="Get Campaign Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="campaign-details.html" class="btn btn-neutral float-left" title="Campaign Details Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact-delete.html" class="btn btn-neutral float-right" title="Contact Delete Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
