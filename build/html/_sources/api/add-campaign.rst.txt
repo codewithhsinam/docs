@@ -35,22 +35,6 @@ Sample Input:
         "schedule" : "2025-07-08"
     }
 
-Sample Input To Add Individual Contact:
-
-.. code-block:: json
-
-    {
-        "number" : 9823561098
-    }
-
-Sample Input To Add Bulk Contact:
-
-.. code-block:: json
-
-    {
-        "bulk_file" : "numbers.xlsx"
-    }
-
 Sample Output:
 
 .. code-block:: json
@@ -80,12 +64,45 @@ Sample Output:
         "main_audit": "4770"
     }
 
+
+**Add Individual Contact in Campaign Endpoint**
+
++---------------------------------------------------------------------------------+--------------------+----------------+
+| URL                                                                             | Required Values    | HTTP Methods   |
++=================================================================================+====================+================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/<campaign_id>/add-contact/    | Campaign ID        |     POST       |
++---------------------------------------------------------------------------------+--------------------+----------------+
+
+Sample Input To Add Individual Contact:
+
+.. code-block:: json
+
+    {
+        "number" : 9823561098
+    }
+
 Sample Output for Individual Contact:
 
 .. code-block:: json
 
     {
         "message": "New Contact added"
+    }
+
+**Add Bulk Contact in Campaign Endpoint**
+
++-----------------------------------------------------------------------------------+--------------------+----------------+
+| URL                                                                               | Required Values    | HTTP Methods   |
++===================================================================================+====================+================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/create/<campaign_id>/detail/    | Campaign ID        |     POST       |
++-----------------------------------------------------------------------------------+--------------------+----------------+
+
+Sample Input To Add Bulk Contact:
+
+.. code-block:: json
+
+    {
+        "bulk_file" : "numbers.xlsx"
     }
 
 Sample Output for Bulk Contact:
