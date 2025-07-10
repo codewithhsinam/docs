@@ -22,6 +22,6 @@ Campaign
 
 .. _campaign-action:
 
-Campaign Action
----------------
+.. Campaign Action
+.. ---------------
 

@@ -5,6 +5,7 @@ Campaign
     :maxdepth: 1
 
     get-campaign
+    voice-assistance
     add-campaign
     update-campaign
     delete-campaign

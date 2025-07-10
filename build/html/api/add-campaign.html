@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Update Campaign Endpoint" href="update-campaign.html" />
-    <link rel="prev" title="Get Campaign Endpoint" href="get-campaign.html" /> 
+    <link rel="prev" title="Voice Assistance Endpoint" href="voice-assistance.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,17 +49,21 @@
 <li class="toctree-l2"><a class="reference internal" href="phone-numbers.html">Phone Numbers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="campaign.html">Campaign</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="get-campaign.html">Get Campaign Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="voice-assistance.html">Voice Assistance Endpoint</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Add Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update-campaign.html">Update Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete-campaign.html">Delete Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="campaign-details.html">Campaign Details Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-list.html">Contact List Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-delete.html">Contact Delete Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-information.html">Contact Information Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-edit.html">Contact Edit Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="test-voice.html">Test Voice Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="demo-call.html">Demo Call Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="run-campaign.html">Run Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="download-report.html">Download Report Endpoint</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="campaign-action.html">Campaign Action</a></li>
 </ul>
 </li>
 </ul>
@@ -101,7 +105,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference external" href="https://newtingtingapi.prixa.live/api/v1/campaign/create/">https://newtingtingapi.prixa.live/api/v1/campaign/create/</a></p></td>
-<td><p>name, services, user_phone, message, sms_message, description, schedule</p></td>
+<td><p>name, services, user_phone, message, sms_message, description, schedule, voice</p></td>
 <td><p>POST</p></td>
 </tr>
 </tbody>
@@ -109,7 +113,7 @@
 <p>To add a campaign, you’ll need to access the campaign endpoint using the HTTP POST method. The required inputs for
 creating a campaign include the name of the campaign, the services offered by the campaign, phone number through
 which the campaign will be executed, the message to be sent, the SMS message is needed for SMS service and
-PHONE &amp; SMS service only, the description of the campaign, and the schedule of the campaign.</p>
+PHONE &amp; SMS service only, the description of the campaign, schedule of the campaign and voice assistance for the campaign.</p>
 <p>Furthermore, you can also add available tags to your message using variables and passing it inside curly braces.</p>
 <p>Sample Tags:</p>
 <p>Message: “नमस्कार, {tags_name}, हजुर {tags_age} वर्षको हुनुहुन्छ र हजुरको सालारी {tags_salary} छ <a href="#id1"><span class="problematic" id="id2">|</span></a>”</p>
@@ -118,11 +122,12 @@ PHONE &amp; SMS service only, the description of the campaign, and the schedule 
 <span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example test campaign&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;services&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PHONE&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;credit_limit&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;user_phone&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;user_phone&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w">                   </span><span class="err">#</span><span class="w"> </span><span class="err">Here</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">pho</span><span class="kc">ne</span><span class="w"> </span><span class="kc">nu</span><span class="err">mber</span>
 <span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello, how are you?&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;sms_message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SMS check!!&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Test message&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;schedule&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-08&quot;</span>
+<span class="w">    </span><span class="nt">&quot;schedule&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-08&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;voice&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">                           </span><span class="err">#</span><span class="w"> </span><span class="err">Here</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">voice</span><span class="w"> </span><span class="err">assis</span><span class="kc">tan</span><span class="err">ce</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -145,11 +150,17 @@ PHONE &amp; SMS service only, the description of the campaign, and the schedule 
 <span class="w">    </span><span class="nt">&quot;progress_percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-07T13:13:16.286224+05:45&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;credit_limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;voice&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;voice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;voice_display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shreegya&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;voice_internal_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;np_shreegya&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;is_premium&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;draft&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;failover_target&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">    </span><span class="nt">&quot;length_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.00&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;main_audit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4770&quot;</span>
+<span class="w">    </span><span class="nt">&quot;main_audit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4770&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;voice&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -248,7 +259,7 @@ PHONE &amp; SMS service only, the description of the campaign, and the schedule 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="get-campaign.html" class="btn btn-neutral float-left" title="Get Campaign Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="voice-assistance.html" class="btn btn-neutral float-left" title="Voice Assistance Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="update-campaign.html" class="btn btn-neutral float-right" title="Update Campaign Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

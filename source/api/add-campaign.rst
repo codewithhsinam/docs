@@ -1,16 +1,16 @@
 Add Campaign Endpoint
 ==============
 
-+--------------------------------------------------------------------+-----------------------------------------------------------------------+----------------+
-| URL                                                                | Required Values                                                       | HTTP Methods   |
-+====================================================================+=======================================================================+================+
-| https://newtingtingapi.prixa.live/api/v1/campaign/create/          |name, services, user_phone, message, sms_message, description, schedule|     POST       |
-+--------------------------------------------------------------------+-----------------------------------------------------------------------+----------------+
++--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
+| URL                                                                | Required Values                                                                | HTTP Methods   |
++====================================================================+================================================================================+================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/create/          | name, services, user_phone, message, sms_message, description, schedule, voice |     POST       |
++--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
 
 To add a campaign, you’ll need to access the campaign endpoint using the HTTP POST method. The required inputs for 
 creating a campaign include the name of the campaign, the services offered by the campaign, phone number through
 which the campaign will be executed, the message to be sent, the SMS message is needed for SMS service and 
-PHONE & SMS service only, the description of the campaign, and the schedule of the campaign.
+PHONE & SMS service only, the description of the campaign, schedule of the campaign and voice assistance for the campaign.
 
 Furthermore, you can also add available tags to your message using variables and passing it inside curly braces.
 
@@ -28,11 +28,12 @@ Sample Input:
         "name" : "example test campaign",
         "services" : "PHONE",
         "credit_limit" : 100,
-        "user_phone" : [3],
+        "user_phone" : [3],                   # Here, 3 is the id of the phone number
         "message" : "Hello, how are you?",
         "sms_message" : "SMS check!!",
         "description" : "Test message",
-        "schedule" : "2025-07-08"
+        "schedule" : "2025-07-08",
+        "voice" : 3                           # Here, 3 is the id of the voice assistance
     }
 
 Sample Output:
@@ -57,11 +58,17 @@ Sample Output:
         "progress_percent": 0,
         "updated_at": "2025-07-07T13:13:16.286224+05:45",
         "credit_limit": 100,
-        "voice": null,
+        "voice": {
+            "id": 3,
+            "voice_display_name": "Shreegya",
+            "voice_internal_name": "np_shreegya",
+            "is_premium": false
+        },
         "draft": false,
         "failover_target": [],
         "length_factor": "1.00",
-        "main_audit": "4770"
+        "main_audit": "4770",
+        "voice" : 3
     }
 
 
