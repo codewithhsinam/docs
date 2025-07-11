@@ -49,6 +49,7 @@
 <li class="toctree-l2"><a class="reference internal" href="phone-numbers.html">Phone Numbers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="campaign.html">Campaign</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="get-campaign.html">Get Campaign Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="voice-assistance.html">Voice Assistance Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-campaign.html">Add Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update-campaign.html">Update Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete-campaign.html">Delete Campaign Endpoint</a></li>
@@ -103,29 +104,56 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://newtingtingapi.prixa.live/api/v1/campaign">https://newtingtingapi.prixa.live/api/v1/campaign</a>/&lt;campaign_id&gt;/contacts/</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://newtingtingapi.prixa.live/api/v1/campaign-detail">https://newtingtingapi.prixa.live/api/v1/campaign-detail</a>/&lt;campaign_id&gt;/</p></td>
 <td><p>Campaign ID</p></td>
 <td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
 <p>Note that the &lt;campaign_id&gt; in the URL should be replaced with the ID of the campaign you want to retrieve the contact of.</p>
-<p>The ID will be used to then delete and edit the contact from the campaign.</p>
 <p>Sample Output:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9841349152&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9865993245&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9861566372&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">]</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;total_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9841349152&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;not started&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-08T16:52:53.054691+05:45&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;call_duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;playback&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed_SMS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NTC&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9865993245&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;not started&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-08T16:52:53.054691+05:45&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;call_duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;playback&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed_SMS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NTC&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9861566372&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;not started&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-07-08T16:52:53.054691+05:45&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;call_duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;playback&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credit_consumed_SMS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;carrier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NTC&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;total_credits_consumed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>

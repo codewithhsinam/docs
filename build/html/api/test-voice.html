@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Demo Call Endpoint" href="demo-call.html" />
-    <link rel="prev" title="Campaign Details Endpoint" href="campaign-details.html" /> 
+    <link rel="prev" title="Contact Edit Endpoint" href="contact-edit.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,17 +49,21 @@
 <li class="toctree-l2"><a class="reference internal" href="phone-numbers.html">Phone Numbers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="campaign.html">Campaign</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="get-campaign.html">Get Campaign Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="voice-assistance.html">Voice Assistance Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="add-campaign.html">Add Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update-campaign.html">Update Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete-campaign.html">Delete Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="campaign-details.html">Campaign Details Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-list.html">Contact List Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-delete.html">Contact Delete Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-information.html">Contact Information Endpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact-edit.html">Contact Edit Endpoint</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Test Voice Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="demo-call.html">Demo Call Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="run-campaign.html">Run Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="download-report.html">Download Report Endpoint</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="campaign-action.html">Campaign Action</a></li>
 </ul>
 </li>
 </ul>
@@ -109,13 +113,24 @@
 </table>
 <p>To test a voice, a sample message needs to be provided. You can also specify the voice to test your message.
 The options are: np_rija, np_prasanna, np_shreegya and np_binod. If nothing is provided, np_rija is used.</p>
+<p>Sample Input:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;voice_input&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hello namaste how are you kasto cha tapailai&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Sample Output:</p>
+<blockquote>
+<div><p>“<a class="reference external" href="https://riritwo.prixacdn.net/output/d2eae9459c60a4f840b4628d97d50b95.mp3">https://riritwo.prixacdn.net/output/d2eae9459c60a4f840b4628d97d50b95.mp3</a>”</p>
+</div></blockquote>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="campaign-details.html" class="btn btn-neutral float-left" title="Campaign Details Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact-edit.html" class="btn btn-neutral float-left" title="Contact Edit Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="demo-call.html" class="btn btn-neutral float-right" title="Demo Call Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
