@@ -32,8 +32,7 @@ Sample Input:
         "message" : "Hello, how are you?",
         "sms_message" : "SMS check!!",
         "description" : "Test message",
-        "schedule" : "2025-07-08",
-        "voice" : 3                           # Here, 3 is the id of the voice assistance
+        "schedule" : "2025-07-08",         
     }
 
 Sample Output:
@@ -58,17 +57,48 @@ Sample Output:
         "progress_percent": 0,
         "updated_at": "2025-07-07T13:13:16.286224+05:45",
         "credit_limit": 100,
-        "voice": {
-            "id": 3,
-            "voice_display_name": "Shreegya",
-            "voice_internal_name": "np_shreegya",
-            "is_premium": false
-        },
+        "voice": null,
         "draft": false,
         "failover_target": [],
         "length_factor": "1.00",
         "main_audit": "4770",
         "voice" : 3
+    }
+
+
+
+**Add Voice Assistance Endpoint**
+
++------------------------------------------------------------------------------------+-------------------------------------------------------------------+----------------+
+| URL                                                                                | Required Values                                                   | HTTP Methods   |
++====================================================================================+===================================================================+================+
+| https://newtingtingapi.prixa.live/api/v1/campaign/create/<campaign_id>/message/    | Campaign ID, voice, category, length_factor, message, sms_message |     PATCH      |
++------------------------------------------------------------------------------------+-------------------------------------------------------------------+----------------+
+
+Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to add the details of.
+
+Sample Input:
+
+..  code-block:: json
+
+    {
+        "voice" : 3,
+        "category" : "example category"
+    }
+
+As message, sms_message is already provided above so no need to provide here. length_factor default value is 1 and draft value is false.
+
+Sample Output:
+
+.. code-block:: json
+
+    {
+        "voice": 3,
+        "sms_message": "SMS check!!",
+        "message": "Hello, how are you?",
+        "category": "example category",
+        "draft": false,
+        "length_factor": "1.00"
     }
 
 

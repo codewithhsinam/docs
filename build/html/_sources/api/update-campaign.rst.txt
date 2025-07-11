@@ -41,7 +41,7 @@ Sample Output:
         "description": "Test message",
         "schedule": "2025-07-09T00:00:00+05:45",
         "audio_file": null,
-        "category": "",
+        "category": "example category",
         "user_phone": [
             3
         ],
@@ -49,7 +49,7 @@ Sample Output:
         "progress_percent": 0,
         "updated_at": "2025-07-07T14:01:50.508344+05:45",
         "credit_limit": 100,
-        "voice": null,
+        "voice": 3,
         "draft": false,
         "failover_target": [],
         "length_factor": "1.00"
