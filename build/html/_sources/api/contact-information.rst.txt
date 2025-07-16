@@ -7,7 +7,7 @@ Contact Information Endpoint
 | https://newtingtingapi.prixa.live/api/v1/campaign/<contact_id>/attributes/    | Contact ID        | GET             |
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 
-Note that the <number_id> in the URL should be replaced with the ID of the contact you want to retrieve the information of.
+Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to retrieve the information of.
 
 The details of the contact will be retrieved with the following details:
 
