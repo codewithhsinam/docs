@@ -4,7 +4,7 @@ User Detail Endpoint
 +-------------------------------------------------------------------+-------------------+----------------+
 | URL                                                               | Required Values   | HTTP Methods   |
 +===================================================================+===================+================+
-| https://newtingtingapi.prixa.live/api/v1/auths/user-profile       |                   | GET            |
+| https://newtingtingapi.prixa.live/api/v1/auths/user-profile/      |                   | GET            |
 +-------------------------------------------------------------------+-------------------+----------------+
 
 You can get all your details via a GET request.

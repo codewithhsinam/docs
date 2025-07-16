@@ -10,7 +10,7 @@ To test a voice, a sample message needs to be provided.
 +---------------------------------------------------------------------------------+-----------------------------------+---------------+
 
 To test a voice, a sample message needs to be provided. You can also specify the voice to test your message. 
-The options are: np_rija, np_prasanna, np_shreegya and np_binod. If nothing is provided, np_rija is used.
+The options are: np_rija, np_rija(premium), np_prashanna, np_shreegya and np_binod. If nothing is provided, np_rija is used.
 
 Sample Input:
 
@@ -18,9 +18,9 @@ Sample Input:
 
     {
         "voice_input" : 5,
-        "message" : "hello namaste how are you kasto cha tapailai"
+        "message" : "yo test voice ko laagi ho"
     }
 
 Sample Output:
 
-    "https://riritwo.prixacdn.net/output/d2eae9459c60a4f840b4628d97d50b95.mp3"
+    "https://riritwo.prixacdn.net/output/eccc8258894076a9dc9e00cf4ebf472a.mp3"

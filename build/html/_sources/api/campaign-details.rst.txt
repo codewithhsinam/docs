@@ -4,7 +4,7 @@ Campaign Details Endpoint
 +------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                              | Required Values   | HTTP Methods    |
 +==================================================================+===================+=================+
-| https://newtingtingapi.prixa.live/api/v1/campaign/<campaign_id>  | Campaign ID       | GET             |
+| https://newtingtingapi.prixa.live/api/v1/campaign/<campaign_id>/ | Campaign ID       | GET             |
 +------------------------------------------------------------------+-------------------+-----------------+
 
 Note that the <campaign_id> in the URL should be replaced with the ID of the campaign you want to delete.

@@ -4,7 +4,7 @@ Demo Call Endpoint
 +---------------------------------------------------------------------------------+-------------------+---------------+
 | URL                                                                             | Required Values   | HTTP Methods  |
 +=================================================================================+===================+===============+
-| https://newtingtingapi.prixa.live/api/v1/demo-call/<contact_id>                 | Contact ID        |     POST      |
+| https://newtingtingapi.prixa.live/api/v1/demo-call/<contact_id>/                | Contact ID        |     POST      |
 +---------------------------------------------------------------------------------+-------------------+---------------+
 
 To test a voice, you can use the demo call endpoint.

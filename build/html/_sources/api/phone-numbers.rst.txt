@@ -6,4 +6,3 @@ Phone Numbers
 
     active-broker-phone
     active-phone-number
-    .. release-number
