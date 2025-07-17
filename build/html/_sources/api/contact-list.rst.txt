@@ -53,5 +53,8 @@ Sample Output:
                 "carrier": "NTC"
             }
         ],
-        "total_credits_consumed": 0
+        "total_credits_consumed": 0,
+        "carrier_summary": {
+            "NTC": 3
+        }
     }
