@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="User Detail Endpoint" href="user-detail.html" />
-    <link rel="prev" title="Refresh Access Token Endpoint" href="refresh-token.html" />  
+    <link rel="prev" title="Refresh Access Token Endpoint" href="refresh-token.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,6 +72,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API</a></li>
+          <li class="breadcrumb-item"><a href="authentication.html">Authentication</a></li>
       <li class="breadcrumb-item active">Get API Key Endpoint</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/get-api-key.rst.txt" rel="nofollow"> View page source</a>
@@ -98,7 +100,7 @@
 </tr>
 </tbody>
 </table>
-<p>This endpoint returns the acces_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.</p>
+<p>This endpoint returns the access_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.</p>
 <p>Sample Output (when API key exists):</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;access_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;39106a38ac483eb4625308fe98411588&quot;</span><span class="p">,</span>
@@ -112,7 +114,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>** How to Use API Keys **</p>
+<p><strong>How to Use API Keys</strong></p>
 <p>Once you retrieve the API keys, you can authenticate without logging in again by passing them in the request headers for other endpoints.</p>
 <p>Required Headers:</p>
 <div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="err">X-ACCESS-KEY: 39106a38ac483eb4625308fe98411588</span>
@@ -130,7 +132,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="refresh-token.html" class="btn btn-neutral float-left" title="Refresh Access Token Endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="user-detail.html" class="btn btn-neutral float-right" title="User Detail" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="user-detail.html" class="btn btn-neutral float-right" title="User Detail Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -7,7 +7,7 @@ Get API Key Endpoint
 | https://newtingtingapi.prixa.live/api/v1/auths/get-api-keys/       |                   | GET             |
 +--------------------------------------------------------------------+-------------------+-----------------+
 
-This endpoint returns the acces_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.
+This endpoint returns the access_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.
 
 Sample Output (when API key exists):
 
@@ -26,7 +26,7 @@ Sample Output (when API key is not found):
         "message": "No API credentials found for this user."
     }
 
-** How to Use API Keys **
+**How to Use API Keys**
 
 Once you retrieve the API keys, you can authenticate without logging in again by passing them in the request headers for other endpoints.
 
