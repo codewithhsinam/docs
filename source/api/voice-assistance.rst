@@ -4,7 +4,7 @@ Voice Assistance Endpoint
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                           | Required Values   | HTTP Methods    |
 +===============================================================================+===================+=================+
-| https://newtingtingapi.prixa.live/api/v1/voice-models/                        |                   |      GET        |
+| https://api.tingting.io/api/v1/voice-models/                        |                   |      GET        |
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint is used to list the voice assistance available to use in the campaign.

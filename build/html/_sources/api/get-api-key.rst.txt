@@ -4,7 +4,7 @@ Get API Key Endpoint
 +--------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                | Required Values   | HTTP Methods    |
 +====================================================================+===================+=================+
-| https://newtingtingapi.prixa.live/api/v1/auths/get-api-keys/       |                   | GET             |
+| https://api.tingting.io/api/v1/auths/get-api-keys/       |                   | GET             |
 +--------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint returns the access_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.

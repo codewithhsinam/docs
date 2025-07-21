@@ -4,7 +4,7 @@ Download Report Endpoint
 +----------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                        | Required Values   | HTTP Methods    |
 +============================================================================+===================+=================+
-| https://newtingtingapi.prixa.live/api/v1/download/report/<campaign_id>/    | Campaign ID       | GET             |
+| https://api.tingting.io/api/v1/download/report/<campaign_id>/    | Campaign ID       | GET             |
 +----------------------------------------------------------------------------+-------------------+-----------------+
 
 Note that the <campaign_id> in the URL should be replaced with the ID of the campaign you want to download the report of. 

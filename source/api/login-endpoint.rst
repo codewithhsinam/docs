@@ -5,7 +5,7 @@ Login Endpoint
 +------------------------------------------------------------+-------------------+---------------+
 | URL                                                        | Required Values   | HTTP Methods  |
 +============================================================+===================+===============+
-| https://newtingtingapi.prixa.live/api/v1/auths/login/      | email, password   | POST          |
+| https://api.tingting.io/api/v1/auths/login/      | email, password   | POST          |
 +------------------------------------------------------------+-------------------+---------------+
 
 After successful authentication you will get an access token. This token needs to be provided for every further request.
