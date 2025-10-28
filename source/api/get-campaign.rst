@@ -4,7 +4,7 @@ Get Campaign Endpoint
 +------------------------------------------------------------+-------------------+---------------+
 | URL                                                        | Required Values   | HTTP Methods  |
 +============================================================+===================+===============+
-| https://api.tingting.io/api/v1/campaign/         |                   |     GET       |
+| https://api.tingting.io/api/v1/campaign/                   |                   |     GET       |
 +------------------------------------------------------------+-------------------+---------------+
 
 Information of all of your campaigns are retrieved at this endpoint. The information includes the campaign id, 
