@@ -6,7 +6,7 @@ To test a voice, a sample message needs to be provided.
 +---------------------------------------------------------------------------------+-----------------------------------+---------------+
 | URL                                                                             | Required Values                   | HTTP Methods  |
 +=================================================================================+===================================+===============+
-| https://api.tingting.io/api/v1/test-speak/riri/<campaign_id>/         | Message, Voice input, Campaign ID |     POST      |
+| https://api.tingting.io/api/v1/test-speak/riri/<campaign_id>/                   | Message, Voice input, Campaign ID |     POST      |
 +---------------------------------------------------------------------------------+-----------------------------------+---------------+
 
 To test a voice, a sample message needs to be provided. You can also specify the voice to test your message. 
