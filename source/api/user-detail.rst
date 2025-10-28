@@ -4,7 +4,7 @@ User Detail Endpoint
 +-------------------------------------------------------------------+-------------------+----------------+
 | URL                                                               | Required Values   | HTTP Methods   |
 +===================================================================+===================+================+
-| https://api.tingting.io/api/v1/auths/user-profile/      |                   | GET            |
+| https://api.tingting.io/api/v1/auths/user-profile/                |                   | GET            |
 +-------------------------------------------------------------------+-------------------+----------------+
 
 You can get all your details via a GET request.

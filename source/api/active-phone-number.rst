@@ -4,7 +4,7 @@ Active Phone Number Endpoint
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                           | Required Values   | HTTP Methods    |
 +===============================================================================+===================+=================+
-| https://api.tingting.io/api/v1/phone-number/active/                 |                   | GET             |
+| https://api.tingting.io/api/v1/phone-number/active/                           |                   | GET             |
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint lists all active phone numbers for the authenticated user

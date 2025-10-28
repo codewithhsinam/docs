@@ -4,7 +4,7 @@ Contact Edit Endpoint
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                           | Required Values   | HTTP Methods    |
 +===============================================================================+===================+=================+
-| https://api.tingting.io/api/v1/phone-number/update/<contact_id>/    | Contact ID        | PATCH           |
+| https://api.tingting.io/api/v1/phone-number/update/<contact_id>/              | Contact ID        | PATCH           |
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 
 Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to edit the details of.  The attributes of the contact you want to change also needs to be provided.

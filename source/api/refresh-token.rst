@@ -4,7 +4,7 @@ Refresh Access Token Endpoint
 +--------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                | Required Values   | HTTP Methods    |
 +====================================================================+===================+=================+
-| https://api.tingting.io/api/v1/auths/login/refresh/      |                   | POST            |
+| https://api.tingting.io/api/v1/auths/login/refresh/                |                   | POST            |
 +--------------------------------------------------------------------+-------------------+-----------------+
 
 Refreshes the access token using the refresh token stored in the HTTP cookie. This endpoint is used to 

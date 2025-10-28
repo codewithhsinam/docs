@@ -4,7 +4,7 @@ Add Campaign Endpoint
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
 | URL                                                                | Required Values                                                                | HTTP Methods   |
 +====================================================================+================================================================================+================+
-| https://api.tingting.io/api/v1/campaign/create/          | name, services, user_phone, message, sms_message, description, schedule, voice |     POST       |
+| https://api.tingting.io/api/v1/campaign/create/                    | name, services, user_phone, message, sms_message, description, schedule, voice |     POST       |
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
 
 To add a campaign, you’ll need to access the campaign endpoint using the HTTP POST method. The required inputs for 
@@ -72,7 +72,7 @@ Sample Output:
 +------------------------------------------------------------------------------------+-------------------------------------------------------------------+----------------+
 | URL                                                                                | Required Values                                                   | HTTP Methods   |
 +====================================================================================+===================================================================+================+
-| https://api.tingting.io/api/v1/campaign/create/<campaign_id>/message/    | Campaign ID, voice, category, length_factor, message, sms_message |     PATCH      |
+| https://api.tingting.io/api/v1/campaign/create/<campaign_id>/message/              | Campaign ID, voice, category, length_factor, message, sms_message |     PATCH      |
 +------------------------------------------------------------------------------------+-------------------------------------------------------------------+----------------+
 
 Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to add the details of.

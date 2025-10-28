@@ -62,9 +62,9 @@
 <li class="toctree-l3"><a class="reference internal" href="demo-call.html">Demo Call Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="run-campaign.html">Run Campaign Endpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="download-report.html">Download Report Endpoint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otp.html">OTP</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otp.html">OTP</a></li>
 </ul>
 </li>
 </ul>
@@ -97,6 +97,22 @@
              
   <section id="update-campaign-endpoint">
 <h1>Update Campaign Endpoint<a class="headerlink" href="#update-campaign-endpoint" title="Link to this heading"></a></h1>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>URL</p></th>
+<th class="head"><p>Required Values</p></th>
+<th class="head"><p>Other Values</p></th>
+<th class="head"><p>HTTP Methods</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://api.tingting.io/api/v1/campaign">https://api.tingting.io/api/v1/campaign</a>/&lt;campaign_id&gt;/</p></td>
+<td><p>Campaign Id</p></td>
+<td><p>name, services, message, sms_message, schedule</p></td>
+<td><p>POST</p></td>
+</tr>
+</tbody>
+</table>
 <p>To update a campaign, you’ll need to provide the campaign ID in the URL of the API endpoint.
 In addition to the campaign ID, you’ll also need to provide the new values that will replace the existing values
 in the campaign.</p>
